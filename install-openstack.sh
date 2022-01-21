@@ -1,0 +1,7 @@
+echo "need Super User Level before run this script"
+sudo apt update && sudo apt upgrade -y
+snap install microstack --devmode --edge
+
+# /var/snap/microstack/common/etc/horizon/local_settings.d/_05_snap_tweaks.py
+sed 's/DEBUG = False/DEBUG = True/g' /var/snap/microstack/common/etc/horizon/local_settings.d/_05_snap_tweaks.py
+#
