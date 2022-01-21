@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "need Super User Level before run this script"
 sudo apt update && sudo apt upgrade -y
 sudo snap install microstack --devmode --edge
